@@ -1,0 +1,12 @@
+Encapsulation
+- Encapsulation allows us to modify the code or A part of the code without having
+  change other functions or code.
+- Encapsulation control how we access the data
+- Data hiding
+- getter and setter (public method)
+
+
+Static Variable - Class Level
+Nonstatic Variable  -  Object/Instance level
+
+- toString() - represent object into String
