@@ -1,6 +1,6 @@
-import com.learnjava.example.encapsulation.Country;
+package com.learnjava.example.encapsulation;
 
-public class Application {
+public class CountryTest {
     public static void main(String[] args) {
         Country country = new Country();
         country.setName("India");
