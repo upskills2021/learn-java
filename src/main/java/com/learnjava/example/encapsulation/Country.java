@@ -27,5 +27,4 @@ public class Country {
                 ", currency='" + currency + '\'' +
                 '}';
     }
-
 }
