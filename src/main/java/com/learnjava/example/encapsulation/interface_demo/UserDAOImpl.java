@@ -1,22 +1,23 @@
 package com.learnjava.example.encapsulation.interface_demo;
 
-import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
+import java.util.stream.Collectors;
 
-public class UserDAOImpl implements UserDAO{
-    private List<User> users = new ArrayList<>();
+public class UserDAOImpl extends AbstractGenericDomainDAOImpl implements UserDAO {
     @Override
-    public void create(User user) {
-        //implement logic to save user to db
-        users.add(user);
-        System.out.println("User successfully created..");
+    public User findByUserId(String userId) {
+        List<DomainEntity> domainEntities = super.entities;
+        List<User> users = convertDomainEntitiesToUser(domainEntities);
+        return users.stream()
+                .filter(user -> Objects.equals(userId, user.getUserId()))
+                .findFirst()
+                .orElse(null);
     }
 
-    @Override
-    public User findById(Long userId) {
-      return users.stream()
-              .filter(u -> u.getUserId() == userId)
-              .findFirst()
-              .orElse(null);
+    private List<User> convertDomainEntitiesToUser(List<DomainEntity> domainEntities) {
+        return domainEntities.stream()
+                .map(entity -> (User) entity)
+                .collect(Collectors.toList());
     }
 }
