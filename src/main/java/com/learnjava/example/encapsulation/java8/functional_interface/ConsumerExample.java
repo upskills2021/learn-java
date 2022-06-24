@@ -12,9 +12,8 @@ public class ConsumerExample {
 
      public static void main(String[] args) {
          List<Student> students = StudentDataBase.getAllStudents();
-         //students.forEach(c1);
          students.forEach(student -> {
-             if(student.getGpa() > 3.9) {
+             if (student.getGpa() >= 3.9 && student.getGradeLevel() >= 4) {
                  c1.andThen(c2).accept(student);
              }
          });
