@@ -1,7 +1,7 @@
 package com.learnjava.example.encapsulation.static_context;
 
 public class StaticVariable {
-  private static int x;
+  public static int x;
   static {
       System.out.println("Inside the static block of static variable class");
       x = 10;
