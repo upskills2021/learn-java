@@ -1,6 +1,6 @@
 package com.learnjava.example.encapsulation.inheritance_example;
 
-public class Person {
+public class Person{
     private String firstName;
     private String lastName;
     private String email;
@@ -45,6 +45,10 @@ public class Person {
 
     public void setAddress(Address address) {
         this.address = address;
+    }
+
+    public void printObjectName() {
+        System.out.println(":: Person ::");
     }
 
     @Override
