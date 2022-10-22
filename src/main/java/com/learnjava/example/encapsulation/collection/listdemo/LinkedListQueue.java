@@ -17,6 +17,7 @@ public class LinkedListQueue {
         q = insert(q,2);
         q = insert(q,3);
         System.out.println(q);
+
         q = remove(q);
         System.out.println(q);
 

@@ -4,11 +4,15 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 
 public class CheckedException {
-    public static void main(String[] args) throws FileNotFoundException{
-        readFile();
+    public static void main(String[] args)  {
+        try {
+            readFile();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 
     private static void readFile() throws FileNotFoundException {
-            FileInputStream fis = new FileInputStream("");
+        FileInputStream fis = new FileInputStream("");
     }
 }

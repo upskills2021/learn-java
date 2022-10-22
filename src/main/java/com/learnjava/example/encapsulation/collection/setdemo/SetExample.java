@@ -1,24 +1,27 @@
 package com.learnjava.example.encapsulation.collection.setdemo;
 
-import java.util.HashSet;
-import java.util.LinkedHashSet;
-import java.util.Set;
-import java.util.TreeSet;
+import java.util.*;
 
 public class SetExample {
     public static void main(String[] args) {
-        Set<String> immutableSet = Set.of("A","B","C","D");
-        System.out.println(immutableSet);
+        Set<String> hashSet = new HashSet<>();
+        hashSet.add("D");
+        hashSet.add("B");
+        hashSet.add("A");
+        hashSet.add("C");
+       for(String s: hashSet) {
+           System.out.println(s);
+       }
        // immutableSet.add("E");
-        executeHashSet(immutableSet);
-        executeLinkedHashSet(immutableSet);
-        executeTreeSet(immutableSet);
+        executeHashSet(hashSet);
+        executeLinkedHashSet(hashSet);
+        executeTreeSet(hashSet);
     }
     // In hashset elements are not stored in insertion order as well as sorted order
-    private static void executeHashSet(Set<String> immutableSet) {
-        Set<String> hashSet = new HashSet<>(immutableSet);
+    private static void executeHashSet(Set<String> hashSet) {
         System.out.println(hashSet);
-        hashSet.add("D");
+        hashSet.add("F");
+        hashSet.add("E");
         System.out.println(hashSet);
     }
     // In LinkedHashset elements are not stored in insertion order
