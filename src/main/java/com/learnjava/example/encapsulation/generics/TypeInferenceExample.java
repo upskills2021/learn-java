@@ -21,6 +21,7 @@ public class TypeInferenceExample {
     list.add("B");
     list.add("A");
     TypeInferenceExample.<String>findMinItem(list); // type witness, its not needed
-    TypeInferenceExample.findMinItem(list);
+    String minItem1 = TypeInferenceExample.findMinItem(list);
+    System.out.println(minItem1);
   }
 }

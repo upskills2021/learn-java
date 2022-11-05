@@ -18,10 +18,11 @@ public class GenericMethodExample {
         printItem(product1);
 
         Product product2 = new Product();
-        product2.setProductId(1l);
-        product2.setProductName("P1");
-        product2.setCode("p01");
-        product2.setPrice(BigDecimal.valueOf(1000));
+        product2.setProductId(2l);
+        product2.setProductName("P2");
+        product2.setCode("p02");
+        product2.setPrice(BigDecimal.valueOf(2000));
+        printItem(product2);
         List<Product> products = Arrays.asList(product1, product2);
         printItem(products);
     }

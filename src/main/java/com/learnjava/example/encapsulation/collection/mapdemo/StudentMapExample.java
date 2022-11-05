@@ -46,12 +46,12 @@ public class StudentMapExample {
     }
 
     private static List<Student> findStudentWithMaxGpa() {
-        // TODO:: logic is to be written By Sandipan
+        // TODO:: logic is to be written
         return null;
     }
 
     private static List<Student> findStudentWithMinGpa() {
-        // TODO:: logic is to be written By Sandipan
+        // TODO:: logic is to be written
         return null;
     }
 }
