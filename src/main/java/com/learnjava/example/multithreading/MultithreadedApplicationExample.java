@@ -1,0 +1,11 @@
+package com.learnjava.example.multithreading;
+
+public class MultithreadedApplicationExample {
+    public static void main(String[] args) {
+        Thread t1 = new Thread(new Runner1());
+        Thread t2 = new Thread(new Runner2());
+        t1.start();
+        t2.start();
+        System.out.println("Main Thread is finished!");
+    }
+}

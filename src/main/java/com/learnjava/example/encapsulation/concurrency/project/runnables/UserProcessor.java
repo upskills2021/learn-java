@@ -18,6 +18,7 @@ public class UserProcessor implements Callable<Integer> {
     @Override
     public Integer call() throws Exception {
         int row = 0;
+        System.out.println(Thread.currentThread().getName()+" processing record for : "+userRecord);
         StringTokenizer stringTokenizer = new StringTokenizer(userRecord, ",");
         User user = null;
         while (stringTokenizer.hasMoreTokens()) {

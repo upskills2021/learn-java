@@ -3,15 +3,14 @@ package com.learnjava.example.encapsulation.concurrency.project.dao;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-import java.sql.Statement;
 
 public class DBConnection {
-    static final String JDBC_DRIVER = "org.h2.Driver";
-    static final String DB_URL = "jdbc:h2:~/test";
+    static final String JDBC_DRIVER = "com.mysql.cj.jdbc.Driver";
+    static final String DB_URL = "jdbc:mysql://localhost:3306/test";
 
     //  Database credentials
-    static final String USER = "sa";
-    static final String PASS = "";
+    static final String USER = "root";
+    static final String PASS = "pass1234";
 
 
 
